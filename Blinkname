@@ -1,0 +1,76 @@
+// This isn't always required, but it's a good habit to get into 
+// and it never hurts.
+#include "Particle.h"
+
+// We define MY_LED to be the LED that we want to blink. 
+//
+// In this tutorial, we're using the blue D7 LED (next to D7 on the Photon 
+// and Electron, and next to the USB connector on the Argon and Boron).
+const pin_t MY_LED = D7;
+
+// The following line is optional, but recommended in most firmware. 
+// It allows your code to run before the cloud is connected.
+SYSTEM_THREAD(ENABLED);
+
+// This function is called when the Particle.function is called
+int ledToggle(String command) {
+	if (command.equals("on")) {
+        digitalWrite(MY_LED, HIGH);
+        return 1;
+    }
+    else if (command.equals("off")) {
+        digitalWrite(MY_LED, LOW);
+        return 0;
+    }
+    else {
+		// Unknown option
+        return -1;
+    }
+}
+
+// The setup() method is called once when the device boots.
+void setup() { 
+ // initialize digital pin D7 as an output. 
+ pinMode(D7, OUTPUT); 
+ } 
+   // the loop function runs over and over again forever 
+ void loop() { 
+ //C 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(400); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(400); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(100); // wait for a second 
+ //H 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(80); // wait for a second 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making the voltage LOW 
+ delay(100); // wait for a second 
+ //E 
+ digitalWrite(D7, HIGH); // turn the LED on (HIGH is the voltage level) 
+ delay(100); // wait for a second 
+ digitalWrite(D7, LOW); // turn the LED off by making 
+ }
